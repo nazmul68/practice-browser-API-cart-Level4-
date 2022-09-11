@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Level</title>
+</head>
+
+<body>
+    <header>
+        <h2>Practice task for local storage final level</h2>
+    </header>
+    <main>
+        <h3>Please contact me</h3>
+        <!-- <form> -->
+        <div class="name-div">
+            <p>NAME</p>
+            <input id="name-field" type="text" placeholder="your name">
+            <button id="btn-delete-name" onclick="removeDataByKey('name')">delete name</button>
+            <button id="btn-send-name" onclick="setDataById('name-field','name')">send name</button>
+        </div>
+        <div class="email-div">
+            <p>EMAIL</p>
+            <input id="email-field" type="text" placeholder="your email">
+            <button id="btn-delete-email" onclick="removeDataByKey('email')">delete email</button>
+            <button id="btn-send-email" onclick="setDataById('email-field','email')">send email</button>
+        </div>
+        <div class="message-div">
+            <p>MESSAGE</p>
+            <input id="message-field" type="text" placeholder="type here">
+            <button id="btn-delete-message" onclick="removeDataByKey('message')">delete message</button>
+            <button id="btn-send-message" onclick="setDataById('message-field','message')">send message</button>
+        </div>
+        <!-- </form> -->
+        <br>
+        <button id="send-all" onclick="setAllData()">Send all </button>
+        <button id="delete-all" onclick="resetAllData()">Reset all </button>
+
+        <!-- display local storage data  -->
+        <div id="ul-container">
+            <!-- all data  -->
+        </div>
+    </main>
+    <script src="js/finalLevel.js"></script>
+</body>
+
+</html>
